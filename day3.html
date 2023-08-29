@@ -18,6 +18,9 @@
         left: 20px;
         width: 100px;
         height: 200px;
+        z-index: 1;
+        cursor: pointer;
+        background-color: yellow;
       "
     >
       First div tag
@@ -32,6 +35,7 @@
         top: 200px;
         width: 100px;
         height: 100px;
+        
       "
     >
       Second div tag
@@ -52,15 +56,27 @@
     <div
       style="
         border: 5px solid black;
-        top: 600px;
+        /* top: 600px; */
         height: 100px;
         width: 100px;
         position: absolute;
+        z-index: 2;
+        background-color: brown;
       "
     >
       Fourth Tag
     </div>
 
-    <div style="position: fixed; height: 100px; width: 100px; border: 5px solid yellow; left: 300px;">Fixed tag</div>
+    <div
+      style="
+        position: fixed;
+        height: 100px;
+        width: 100px;
+        border: 5px solid yellow;
+        left: 300px;
+      "
+    >
+      Fixed tag
+    </div>
   </body>
 </html>
