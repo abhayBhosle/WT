@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program1</title>
+    <script type="text/javascript">
+      //   function display() {
+      //     var x = "You have clicked";
+      //     var d = new Date();
+      //     var date = d.getDate();
+      //     var month = d.getMonth();
+      //     month++;
+      //     var year = d.getFullYear();
+      //     document.getElementById("txtdate").value =
+      //       date + "/" + month + "/" + year;
+
+      //     // alert(date + "/" + month + "/" + year);
+      //   }
+      var n = prompt("Enter a number to find its factorial");
+      function factorial(n) {
+        if (n == 0 || n == 1) {
+          return 1;
+        } else {
+          return n * factorial(n - 1);
+        }
+      }
+      let z = factorial(n);
+      alert("The factorial of " + n  + "= " + z);
+    </script>
+  </head>
+  <body>
+    <!-- <form action="" method="">
+      <input type="text" id="txtdate" />
+      <input type="button" value="Display Date" onclick="display();" />
+    </form> -->
+  </body>
+</html>
