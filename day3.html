@@ -35,7 +35,6 @@
         top: 200px;
         width: 100px;
         height: 100px;
-        
       "
     >
       Second div tag
@@ -78,5 +77,13 @@
     >
       Fixed tag
     </div>
+    <button onclick="showDatePop">Show Date</button>
+    <script>
+      function showDatePop() {
+        var a = new Date();
+        var b = a.toDateString();
+        alert("Current Date" + b);
+      }
+    </script>
   </body>
 </html>
