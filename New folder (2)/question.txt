@@ -1,2 +1,8 @@
 Q ) Write an HTML program to create 4 paragraphs in which 2 paragraphs in red color , font size = 10 ,
  another 2 paragraphs blue color , font size = 20 and 30
+
+Notes :
+1)In-line document
+2)External css
+
+In the Selectors forms : ID has more priority followed by CLASS followed by GENERIC followed by UNIVERSAL.
