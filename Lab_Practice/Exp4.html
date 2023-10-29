@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam</title>
+</head>
+
+<body>
+    <h1>Online Exam</h1>
+    <form id="examForm">
+        <h3>Question 1: What is the capital of France?</h3>
+        <input type="radio" name="q1" value="Paris" id="q1a1"> <label for="q1a1">Paris</label><br>
+        <input type="radio" name="q1" value="Berlin" id="q1a2"> <label for="q1a2">Berlin</label><br>
+        <input type="radio" name="q1" value="London" id="q1a3"> <label for="q1a3">London</label><br>
+        <input type="radio" name="q1" value="Madrid" id="q1a4"> <label for="q1a4">Madrid</label><br><br>
+
+        <h3>Question 2: Which planet is known as the Red Planet?</h3>
+        <input type="radio" name="q2" value="Venus" id="q2a1"> <label for="q2a1">Venus</label><br>
+        <input type="radio" name="q2" value="Mars" id="q2a2"> <label for="q2a2">Mars</label><br>
+        <input type="radio" name="q2" value="Jupiter" id="q2a3"> <label for="q2a3">Jupiter</label><br>
+        <input type="radio" name="q2" value="Saturn" id="q2a4"> <label for="q2a4">Saturn</label><br><br>
+
+        <h3>Question 3: What is the largest mammal on Earth?</h3>
+        <input type="radio" name="q3" value="Elephant" id="q3a1"> <label for="q3a1">Elephant</label><br>
+        <input type="radio" name="q3" value="Giraffe" id="q3a2"> <label for="q3a2">Giraffe</label><br>
+        <input type="radio" name="q3" value="Whale" id="q3a3"> <label for="q3a3">Whale</label><br>
+        <input type="radio" name="q3" value="Lion" id="q3a4"> <label for="q3a4">Lion</label><br><br>
+
+        <h3>Question 4: Which gas do plants absorb from the atmosphere?</h3>
+        <input type="radio" name="q4" value="Oxygen" id="q4a1"> <label for="q4a1">Oxygen</label><br>
+        <input type="radio" name="q4" value="Carbon Dioxide" id="q4a2"> <label for="q4a2">Carbon Dioxide</label><br>
+        <input type="radio" name="q4" value="Nitrogen" id="q4a3"> <label for="q4a3">Nitrogen</label><br>
+        <input type="radio" name="q4" value="Methane" id="q4a4"> <label for="q4a4">Methane</label><br><br>
+
+        <button type="button" onclick="calculateScore()">Submit</button>
+    </form>
+
+    <p>Your Score: <span id="score">N/A</span></p>
+
+    <script>
+        function calculateScore() {
+            var score = 0;
+
+            // Check the answers and calculate the score
+            if (document.getElementById("q1a1").checked) score++;
+            if (document.getElementById("q2a2").checked) score++;
+            if (document.getElementById("q3a3").checked) score++;
+            if (document.getElementById("q4a2").checked) score++;
+
+            alert("Your Score: " + score);
+
+            // Reset the form
+            document.getElementById("examForm").reset();
+            document.getElementById("score").textContent = "N/A";
+        }
+    </script>
+</body>
+
+</html>
