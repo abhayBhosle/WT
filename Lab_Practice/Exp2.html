@@ -21,7 +21,7 @@
             var Words = text.match(/\b\S+\b/g) || [];
             var Characters = text.replace(/\s/g, "").length;
             var Lines = text.split("\n").length;
-            var result = "Words" + ": " + Words.length + " " + "Characters" + ": " + Characters + "Lines" + ":" + Lines + " ";
+            var result = "Words" + ": " + Words.length + " " + "Characters" + ": " + Characters+" "+ "Lines" + ":" + Lines + " ";
             alert(result);
         }
     </script>
