@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCQS</title>
+</head>
+
+<body>
+    <form id="forms">
+        <div class="question">
+            <p>1. What is your name?</p>
+            <label><input type="radio" name="q1" value="a">Abhay</label>
+            <label><input type="radio" name="q1" value="b">Jigar</label>
+            <label><input type="radio" name="q1" value="c">Rakesh</label>
+            <label><input type="radio" name="q1" value="d">Sam</label>
+        </div>
+        <div class="question">
+            <p>2. What is your fathers name?</p>
+            <label><input type="radio" name="q2" value="a">Rahuk</label>
+            <label><input type="radio" name="q2" value="b">Handi</label>
+            <label><input type="radio" name="q2" value="c">Anurup</label>
+            <label><input type="radio" name="q2" value="d">Abhi</label>
+        </div>
+        <div class="question">
+            <p>3. What is your mothers name?</p>
+            <label><input type="radio" name="q3" value="a">MC</label>
+            <label><input type="radio" name="q3" value="b">Ikka</label>
+            <label><input type="radio" name="q3" value="c">Honey</label>
+            <label><input type="radio" name="q3" value="d">Uday</label>
+        </div>
+        <div class="question">
+            <p>4. What is son name?</p>
+            <label><input type="radio" name="q4" value="a">Mrunal</label>
+            <label><input type="radio" name="q4" value="b">Raop</label>
+            <label><input type="radio" name="q4" value="c">df</label>
+            <label><input type="radio" name="q4" value="d">fd</label>
+        </div>
+    </form>
+    <button type="submit" onclick="calculateScore()">Submit</button>
+    <button type="reset" onclick="resetF()">Reset</button>
+
+    <script type="text/javascript">
+        function calculateScore() {
+            let score = 0;
+            const answers = ['a', 'a', 'b', 'c'];
+
+            for (let i = 1; i <= 4; i++) {
+                const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selectedAnswer) {
+                    if (selectedAnswer.value == answers[i - 1]) {
+                        score++;
+                    }
+                }
+            }
+            alert(`Your score : ${score}/4`);
+        }
+        function resetF(){
+            document.getElementById("forms").reset();
+        }
+    </script>
+</body>
+
+</html>

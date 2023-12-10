@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Pop-Up Demo</title>
+</head>
+
+<body>
+
+    <button onclick="displayDate()">Display Date</button>
+    <button onclick="calculateFactorial()">Factorial</button>
+    <button onclick="multiplicationTable()">Multiplication Table</button>
+    <button onclick="sumOfNumbers()">Sum of Numbers</button>
+
+    <input type="text" id="output" readonly>
+
+    <script>
+        // a) Display Date
+        function displayDate() {
+            var currentDate = new Date();
+            var dateString = currentDate.toDateString();
+            document.getElementById('output').value = dateString;
+        }
+
+        // b) Factorial Calculation
+        function calculateFactorial() {
+            var n = parseInt(prompt("Enter a number:"));
+            var factorial = 1;
+
+            for (var i = 1; i <= n; i++) {
+                factorial *= i;
+            }
+
+            alert("Factorial of " + n + " is: " + factorial);
+        }
+
+        // c) Multiplication Table
+        function multiplicationTable() {
+            var n = parseInt(prompt("Enter a number:"));
+            var tableString = "";
+
+            for (var i = 1; i <= 10; i++) {
+                tableString += n + " x " + i + " = " + (n * i) + "\n";
+            }
+
+            alert("Multiplication Table for " + n + ":\n" + tableString);
+        }
+
+        // d) Sum of n Numbers
+        function sumOfNumbers() {
+            var n = parseInt(prompt("Enter a number:"));
+            var additionalNumber = confirm("Do you want to add another number?");
+            var sum = n;
+
+            while (additionalNumber) {
+                var anotherNumber = parseInt(prompt("Enter another number:"));
+                sum += anotherNumber;
+                additionalNumber = confirm("Do you want to add another number?");
+            }
+
+            alert("Sum of the numbers is: " + sum);
+        }
+    </script>
+
+
+</body>
+
+</html>

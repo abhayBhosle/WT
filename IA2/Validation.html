@@ -1,0 +1,63 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Number Validation</title>
+</head>
+<body>
+
+<form id="ageForm" onsubmit="return validateAge()">
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age">
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    function validateAge() {
+        var age = document.getElementById('age').value;
+
+        if (isNaN(age) || age === "") {
+            alert("Please enter a valid age");
+            return false; // Prevent form submission
+        }
+        // Additional validation logic can be added here
+
+        return true; // Allow form submission
+    }
+</script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Number Validation</title>
+</head>
+<body>
+
+<form id="ageForm" onsubmit="return validateAge()">
+    <label for="age">Age:</label>
+    <input type="text" id="age" name="age">
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    function validateAge() {
+        var age = document.getElementById('age').value;
+
+        if (isNaN(age) || age === "") {
+            alert("Please enter a valid age");
+            return false; // Prevent form submission
+        }
+        // Additional validation logic can be added here
+
+        return true; // Allow form submission
+    }
+</script>
+
+</body>
+</html>

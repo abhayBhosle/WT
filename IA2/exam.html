@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Exam</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Online Exam</h1>
+
+    <form id="examForm">
+        <fieldset>
+            <legend>What is the Color of Apple?</legend>
+            <label><input type="radio" name="q1" value="a"> Option A</label>
+            <label><input type="radio" name="q1" value="b"> Option B</label>
+            <label><input type="radio" name="q1" value="c"> Option C</label>
+            <label><input type="radio" name="q1" value="d"> Option D</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Question 2</legend>
+            <label><input type="radio" name="q2" value="a"> Option A</label>
+            <label><input type="radio" name="q2" value="b"> Option B</label>
+            <label><input type="radio" name="q2" value="c"> Option C</label>
+            <label><input type="radio" name="q2" value="d"> Option D</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Question 3</legend>
+            <label><input type="radio" name="q3" value="a"> Option A</label>
+            <label><input type="radio" name="q3" value="b"> Option B</label>
+            <label><input type="radio" name="q3" value="c"> Option C</label>
+            <label><input type="radio" name="q3" value="d"> Option D</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Question 4</legend>
+            <label><input type="radio" name="q4" value="a"> Option A</label>
+            <label><input type="radio" name="q4" value="b"> Option B</label>
+            <label><input type="radio" name="q4" value="c"> Option C</label>
+            <label><input type="radio" name="q4" value="d"> Option D</label>
+        </fieldset>
+
+        <button type="button" onclick="submitExam()">Submit</button>
+        <button type="button" onclick="resetExam()">Reset</button>
+    </form>
+
+    <script>
+        function submitExam() {
+            // Calculate the score
+            let score = 0;
+            const correctAnswers = ['b', 'c', 'a', 'd'];
+
+            for (let i = 1; i <= 4; i++) {
+                const selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selectedAnswer) {
+                    if (selectedAnswer.value === correctAnswers[i - 1]) {
+                        score++;
+                    }
+                }
+            }
+
+            // Display the score in an alert box
+            alert(`Your score is: ${score}/4`);
+
+            // Reset the form
+            document.getElementById("examForm").reset();
+        }
+
+        function resetExam() {
+            // Reset the form
+            document.getElementById("examForm").reset();
+        }
+    </script>
+
+</body>
+
+</html>
