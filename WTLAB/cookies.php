@@ -1,7 +1,6 @@
 <?php
-$present_time=date(“H:i:s-m/d/y”);
-
-$expiry= 60 * 60 *24 *60 + time();
+$present_time=date(“H:i:s-m/d/y”);              
+$expiry= 60 * 60 *24 *60 +         time();
 
 setcookie("Lastvisit",$present_time, $expiry);
 
